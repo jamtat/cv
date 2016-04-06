@@ -22,7 +22,21 @@ header {
 	text-align: center;
 	font-weight: 100;
 	font-size: 3em;
-	line-height: 3em;
+	padding-top: 0.8em;
+}
+
+header .name {
+	display: none;
+}
+
+.pdf {
+	font-size: 0.3em;
+	display: block;
+	margin: 0;
+}
+
+.pdf a {
+	border-bottom: 1px dashed currentColor;
 }
 
 main {
@@ -45,14 +59,17 @@ main {
 		font-size: 3em;
 		width: 280px;
 		text-align: left;
-		line-height: 1.2em;
 	}
 
-	header::after {
+	header .name {
 		content: "Benjamin Tattersley";
 		display: block;
 		font-size: 0.5em;
 		line-height: 1.5em;
+	}
+
+	header .pdf {
+		margin-top: 0.7em;
 	}
 
 	main {
@@ -65,7 +82,6 @@ main {
 	header {
 		font-size: 5em;
 		width: 400px;
-		line-height: 1.2em;
 	}
 
 	main {
@@ -143,7 +159,15 @@ a {
 	border-bottom: 1px dashed #333;
 }
 
+.print {
+	display: none;
+}
+
 @media print {
+
+	.print {
+		display: block;
+	}
 
 	@page {
 		margin: 0;
@@ -164,14 +188,18 @@ a {
 /* 		height: 100%; */
 	}
 
-	main::before {
-		content: "view online at btcv.website";
+	.view-online {
 		text-align: center;
-		display: block;
+		color: #555;
+	}
+
+	.view-online a {
+		text-align: center;
+		display: inline-block;
 		margin-bottom: 0.25cm;
 		letter-spacing: 1pt;
 		font-size: 10pt;
-		color: #333;
+		border-bottom-color: currentColor;
 		font-weight: 400;
 	}
 
