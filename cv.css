@@ -50,6 +50,23 @@ main {
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
+.contact {
+	margin: 1em auto;
+	max-width: 600px;
+}
+
+.contact > div {
+	margin-bottom: 0.2em;
+}
+
+.contact > div::before {
+	content: attr(class) ":";
+	display: inline-block;
+	width: 40px;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
 
 @media(min-width: 1200px) {
 	header {
@@ -98,7 +115,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	text-align: center;
 	font-size: 3em;
-	margin: 1em 0.5em 0.7em;
+	margin: 1em 0.5em 0.2em;
 }
 
 p {
@@ -157,7 +174,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	display: inline-block;
-	border-bottom: 1px dashed #333;
+	border-bottom: 1px dashed #666;
 }
 
 .print {
