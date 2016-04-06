@@ -136,6 +136,13 @@ hr {
 	margin: 2em;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 1px dashed #333;
+}
+
 @media print {
 
 	@page {
@@ -150,27 +157,31 @@ hr {
 		width: 100%;
 		max-width: none;
 		margin: 0;
+		margin-bottom:0;
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
+		height: 100%;
 	}
 
-	body::before {
+	main::before {
 		content: "view online at btcv.website";
 		text-align: center;
 		display: block;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.25cm;
+		letter-spacing: 1pt;
 		font-size: 10pt;
-		color: #fff;
+		color: #333;
 		font-weight: 400;
 	}
 
 	body {
 		font-size: 11pt;
-		padding: 1cm;
+		padding: 0.5cm 1cm 1.75cm;
 		background: url(bg.svg);
 		background-size: cover;
 		background-position: center;
+		height: 300%;
 	}
 
 	hr {
@@ -197,12 +208,15 @@ hr {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 	}
-
 }
 
 @media print and (color) {
 	* {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
+	}
+
+	body::before {
+		color: white;
 	}
 }
